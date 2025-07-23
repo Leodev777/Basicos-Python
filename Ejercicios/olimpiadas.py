@@ -103,5 +103,13 @@ print("Tiempo total en segundos:", tiempo_total_segundos)
 # print(mensaje)
 # El año tiene 365 dias
 
+# Que carajos aprendimos en todo esto?
 
+# 1. Uso de variables y su nomenclatura
+# 2. Sting como trabajar con sus funciones y metodos
+# 3. Como trabajar con numeros y operaciones aritmeticas
+# 4. Combinar numeros y strings
+# 5. Leere valores de entrada
+# 6. Conversion entre tipo de datos
+# 7. Comentarios.
 
