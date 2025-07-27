@@ -1,19 +1,19 @@
 # --- Pedir NUMEROS al usuario
-a = float(input("Introduce un numero: "))
-b = float(input("Introduce otro numero: "))
-c = float(input("Introduce otro numero: "))
-d = float(input("Introduce otro numero: "))
+n1 = float(input("Introduce un numero: "))
+n2 = float(input("Introduce otro numero: "))
+n3 = float(input("Introduce otro numero: "))
+n4 = float(input("Introduce otro numero: "))
 
 
 # --- Imprimir el mayor de los cuatro numeros
-if (a>b):
-    a, b = b, a 
+if (n1>n2):
+    n1, n2 = n2, n1 
 
-if (b>c):
-    b, c = c, b
+if (n2>n3):
+    n2, n3 = n3, n2
 
-if (c>d):
-    c, d = d, c
+if (n3>n4):
+    n3, n4 = n4, n3
 
-print(" El mayor de los 4 es ", d)
-print("El orden de los numeros es: ", a, b, c, d)
+print(" El mayor de los 4 es ", n4)
+print("El orden de los numeros es: ", n1, n2, n3, n4)
