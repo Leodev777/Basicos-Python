@@ -16,7 +16,7 @@ else:
 dividendo = float(input("Cargar dividendo"))
 divisor = float(input("Cargar divisor"))
 
-if dividendo == 0:
+if dividendo == 0.0:
     print("ERROR: No se puede dividir")
 else:
     division = dividendo/divisor
