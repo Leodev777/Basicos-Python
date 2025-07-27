@@ -37,4 +37,5 @@ else:
     if contrasena == llave:
         print("Acceso correcto")
     else:
+        print("Error, la contaseña no es correcta")
         print("Adiós")
