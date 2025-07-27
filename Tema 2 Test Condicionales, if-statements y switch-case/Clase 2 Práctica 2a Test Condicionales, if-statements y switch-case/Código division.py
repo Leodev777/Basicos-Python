@@ -20,4 +20,5 @@ if dividendo == 0.0:
     print("ERROR: No se puede dividir")
 else:
     division = dividendo/divisor
-    print("El resultado de dividir", dividendo, "entre ", divisor, "es ", division)    
+    print("El resultado de dividir", dividendo, "entre ", divisor, "es ", division)
+    
