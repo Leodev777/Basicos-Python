@@ -1,4 +1,4 @@
-# --- Pedir tres numeros
+# Pedir tres numeros
 x = float(input("Introduce el primer numero: "))
 y = float(input("Introduce el segundo numero: "))
 z = float(input("Introduce el tercer numero: "))
