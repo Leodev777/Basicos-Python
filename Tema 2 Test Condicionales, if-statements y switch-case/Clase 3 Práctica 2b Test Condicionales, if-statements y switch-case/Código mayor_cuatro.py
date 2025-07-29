@@ -1,11 +1,11 @@
-# --- Pedir NUMEROS al usuario
+# Pedir NUMEROS al usuario
 n1 = float(input("Introduce un numero: "))
 n2 = float(input("Introduce otro numero: "))
 n3 = float(input("Introduce otro numero: "))
 n4 = float(input("Introduce otro numero: "))
 
 
-# --- Imprimir el mayor de los cuatro numeros
+# Imprimir el mayor de los cuatro números
 if (n1>n2):
     n1, n2 = n2, n1 
 
