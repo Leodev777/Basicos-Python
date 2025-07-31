@@ -1,34 +1,34 @@
-# --- Pedir al usuario el tipo de hamburguesa
-hamburguesa = input("Que tipo de hamburguesa quieres? (clasica/vegana): ")
+# ---> Pedir al usuario el tipo de hamburguesa
+hamburguesa = input("¿Qué hamburguesa quieres? clásica/vegana: ")
 
-# --- Comprobamos que hamburguesa ha pedido el usuario
-# Si ha elegido la clasica
-if hamburguesa.lower() == "clasica":
-    ## Ofrecemos la opción de elegir un ingresiente extra: queso, bacon, huevo
-    ingrediente_extra = input("Los ingredientes extra disponibles son: Queso idiazabal, Bacon, Huevo. Elige un ingrediente extra. ") 
-    ## Imprimiremos que tipo de hamburguesa ha elegido
-    if ingrediente_extra.lower() == "queso idiazabal":
-        print("Has elegido una hamburguesa clasica con queso idiazabal")
-    elif ingrediente_extra.lower() == "bacon":
-        print("Has elegido una hamburguesa clasica con bacon")
+# --- Comprobamos qué hamburguesa ha pedido el usuario
+# Si ha elegido la clásica
+if hamburguesa.lower() == "clásica" or hamburguesa.lower() == "clasica":
+    ## Ofrecemos la opción de elegir un ingrediente extra: queso, jamón, huevo
+    ingrediente_extra = input("¿Qué ingrediente extra quieres? Queso / Jamon / Huevo: ")
+   
+    ## Imprimiremos qué tipo de hamburguesa ha elegido
+    if ingrediente_extra.lower() == "queso":
+        print("Elegiste una Clásica con Queso")
+    elif ingrediente_extra.lower() == "jamon":
+        print("Elegiste una Clásica con Jamón")
     elif ingrediente_extra.lower() == "huevo":
-        print("Has elegido una hamburguesa clasica con huevo")
+        print("Elegiste una Clásica con Huevo")
     else:
-        print("El ingrediente selecionado no esta disponible")
+        print("Ingrediente no disponible")
 
-#Si ha elegido la vegana
+# Si ha elegido la vegana
 elif hamburguesa.lower() == "vegana":
-## Ofrecemos la opción de elegir un ingresiente extra: tofu, cebolla caramelizada
-    ingrediente_extra = input("Los ingredientes extra disponibles son: Tofu,Cebolla caramelizada. Elige un ingrediente extra. ") 
-    ## Imprimiremos que tipo de hamburguesa ha elegido
+    ## Ofrecemos la opción de elegir un ingrediente extra: tofu, cebolla caramelizada
+    ingrediente_extra = input("¿Qué ingrediente extra quieres? Tofu / Cebolla caramelizada: ")
+    ## Imprimiremos qué tipo de hamburguesa ha elegido
     if ingrediente_extra.lower() == "tofu":
-        print("Has elegido una hamburguesa vegana con tofu")
+        print("Elegiste una Vegana con Tofu")
     elif ingrediente_extra.lower() == "cebolla caramelizada":
-        print("Has elegido una hamburguesa vegana con cebolla caramelizada")
+        print("Elegiste una Vegana con Cebolla caramelizada")
     else:
-        print("El ingrediente selecionado no esta disponible")
-
-#Si no elige ninguna de las dos
+        print("Ingrediente no disponible")
+        
+# Si no elige ninguna de las dos
 else:
-    ## Imprimiremos un mensaje de error
-    print("Ese tipo de hamburguesa no esta disponible. Por favor vuelve a iniciar tu pedido ")
+    print("Lo sentimos, no tenemos ese tipo de hamburguesa")
