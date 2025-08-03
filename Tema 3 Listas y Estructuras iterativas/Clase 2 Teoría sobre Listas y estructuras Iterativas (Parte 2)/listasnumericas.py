@@ -35,4 +35,3 @@ print('En el equipo A los juagadores son: ', equipo_A)
 print('En el equipo B los jugadores son:' ,equipo_B)
 
 
-
