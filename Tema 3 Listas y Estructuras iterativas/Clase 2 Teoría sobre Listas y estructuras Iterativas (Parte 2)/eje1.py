@@ -11,7 +11,7 @@ lista_numeros = []
 for i in range(0,4):
     numeros = int(input('Introduce un número: '))
     lista_numeros.append(numeros)
-  # Añadimos el numero a la lista
+  # Añadimos el numero a la listaa
 
 # --- Salida del bucle busco los 4 numeros
 print('Los números introducidos son:', lista_numeros)
