@@ -37,3 +37,6 @@ print("Precio mínimo:", precio_minimo)
 # calculamos el precio promedio
 # imrpimimos por pantalla el resultado
 print("Precio promedio:", precio_total / len(precios))
+
+if precio_maximo == precio_minimo:
+    print("Todos los precios son iguales.")
