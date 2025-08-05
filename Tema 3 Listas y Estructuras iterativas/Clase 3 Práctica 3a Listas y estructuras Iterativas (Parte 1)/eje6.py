@@ -15,6 +15,7 @@ for num in range(2, 101): # 2 es el primer primo
     for i in range(2, num): # comprobamos desde 2 hasta num-1
       if num % i == 0: # si es divisible % es el resto de la division
             primo = False # no es primo
+            break # salimos del bucle
     if primo: # si es primo, lo imprimimos
         print(num)     # Imprime el numero primo
 # Para dicho numero, hay alguno que sea sub divisor
