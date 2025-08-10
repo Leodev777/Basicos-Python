@@ -1,39 +1,27 @@
-''' 
-Define una lista de 5 palabras aleatorias 
-y una lista de letras prohibidas que contenga 
-tres letras. Filtra las palabras en tu lista original
- crea una nueva lista de palabras filtradas que 
- solo contenga aquellas palabras que no tienen ninguna letra prohibida.
+# Lista inicial con varias palabras
+palabras_aleatorias = ['gato', 'perro', 'elefante', 'jirafa', 'tigre', 'kata', 'wanaco']
 
-'''
+# Lista con letras que no queremos que aparezcan en las palabras
+letras_prohibidas = ['y', 'k', 'w']
 
-# --- Crear lista de palabras aleatorias y otras de letras prohibidas
-# --- + lista de palabras filtradas
+# Lista vacía donde guardaremos las palabras que pasen el filtro
+lista_de_palabras_filtradas = []
 
-palabras_aleatorias = ["casa", "perro", "gato", "libro", "ratón", "mesa", "silla", "juego", "flor", "árbol", "coche", "lápiz", "ventana", "puerta", "teléfono","computadora","ratón"]
-
-letras_prohibidas = ["a", "u", "e", "z"]
-# inicializamos una lista vacia donde
-# añadiremos las palabras filtradas
-lista_filtrada = []
-
-# --- Bucle para recorrer la lista de palabras
+# Recorremos cada palabra de la lista inicial
 for palabra in palabras_aleatorias:
-    # en principio incluiremos la palabra a no ser que
-    # se compruebe que contiene una letra prohibida
-    incluir = True
-    # Bucle para comprobar si los objetos tiene alguna letra prohibida.
-    for letras_prohibida in letras_prohibidas:
-        ## si tiene letra prohibida no lo incluimos en la lista filtrada
-        if letras_prohibida in palabra:
-            incluir = False
+    incluir = True  # Suponemos inicialmente que la palabra es válida
     
-    # comprobamos si debemos incluir la palabra. En caso de
-    # que no tenga letras prohibidas (incluir = True) la incluimos
+    # Recorremos cada letra prohibida
+    for letra in letras_prohibidas:
+        # Si la letra prohibida aparece en la palabra
+        if letra in palabra:
+            incluir = False  # Marcamos que NO se debe incluir
+            break  # Salimos del bucle interno porque ya no hace falta seguir comprobando
+    
+    # Si después de revisar todas las letras, la palabra sigue siendo válida...
     if incluir:
-        lista_filtrada.append(palabra)
+        lista_de_palabras_filtradas.append(palabra)  # La añadimos a la lista filtrada
 
-# --- Imprimimos por pantalla las tres listas.
-print("Lista original:", palabras_aleatorias)
-print("Letras prohibidas:", letras_prohibidas)
-print("Lista filtrada:", lista_filtrada)
+# Mostramos el resultado final
+print("Lista de palabras filtradas:", lista_de_palabras_filtradas)
+print("Lista de palabras originales:", palabras_aleatorias)
