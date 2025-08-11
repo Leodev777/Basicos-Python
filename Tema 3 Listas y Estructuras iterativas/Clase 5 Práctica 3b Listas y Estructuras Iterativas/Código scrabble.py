@@ -11,7 +11,7 @@ será la suma de los puntos de todas las fichas de la mano.
 
 # --- Lista con las fichas de scrabble
 
-mano_scrabble = ["A5", "B3", "C4", "H8", "D10"]
+mano_scrabble = ["A2", "B1", "C4", "H8", "D7", "E1", "F3", "G2", "I1", "J8"]
 
 # --- bucle en el que recorremos las fichas y sumamos los puntos
 # iniciamos la variable puntos en 0
