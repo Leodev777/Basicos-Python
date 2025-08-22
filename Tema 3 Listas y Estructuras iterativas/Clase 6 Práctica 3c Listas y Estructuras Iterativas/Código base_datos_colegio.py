@@ -18,7 +18,7 @@ la nota media de toda la clase.
 '''
 ### Base de datos colegcio
 ### SOLUCION USANDO UN BUCLE PARA 
-### 
+### #
 ### LA MEDIA INDIVIDUAL Y LA DE LA CLASE
 
 # --- lista con los nombres de los alumnos
