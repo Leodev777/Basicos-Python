@@ -6,7 +6,7 @@ semana para identificar los días de mayor venta.
 
 # lista con las ventas del mes
 ventas = [120, 80, 140, 200, 75, 100, 180, 220, 160, 110, 90, 120, 170, 190, 250, 300, 95, 110, 140, 180, 200, 160, 120, 80, 170, 150, 210, 190, 230, 250]
-# lista con los dias de la semana
+# lista con los dias de la semanaa
 dias_semana = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
 # lista donde guardar las ventas por dia
 ventas_totales = [0, 0, 0, 0, 0, 0, 0] 
@@ -26,4 +26,4 @@ for venta in ventas:
 ## imprimir las ventas realizadas para cada dia de la semana
 ## a lo a largo de ese mes
 for i in range(len(dias_semana)):
-    print(dias_semana[i]+ ":", ventas_totales[i])
+    print(dias_semana[i]+ ":" , ventas_totales[i])
