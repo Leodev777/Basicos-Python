@@ -24,6 +24,6 @@ for venta in ventas:
         dia_venta = 0
 
 ## imprimir las ventas realizadas para cada dia de la semana
-## a lo a largo de ese mes
+## a lo a largo de ese mess
 for i in range(len(dias_semana)):
     print(dias_semana[i]+ ":" , ventas_totales[i])
