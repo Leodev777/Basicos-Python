@@ -30,3 +30,6 @@ for venta in venta_mes:
         dia_venta = 0
 
     print("Ventas por dia de la semana:", dia_venta)
+
+    for i in range(len(dias_semana)):
+        print(dias_semana[i], ":", ventas_totales[i])
