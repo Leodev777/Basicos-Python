@@ -25,9 +25,14 @@ autorizacion = False
 for x in range(len(usuarios)):
     if usuarios[x] == input_usuario and contra[x] == input_contra:
         autorizacion = True
-    if autorizacion:
-        print("Acceso permitido")
-    else:
-        print("Acceso denegado")
-        
 
+
+# Si son iguales damos la bienvenida, si no denegamos el acceso
+
+if autorizacion:
+        print("Acceso permitido")
+
+# si no es autorizado, denegar el acceso
+        
+else:
+        print("Acceso denegado")
