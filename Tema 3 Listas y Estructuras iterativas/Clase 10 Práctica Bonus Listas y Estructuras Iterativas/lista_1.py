@@ -23,11 +23,11 @@ datos_alumno = cadena.split() # split separara la cadena en una lista de valores
 base_datos.append(datos_alumno)
 
 for alumno in base_datos:
-    dni = alumno[2] # extraemos el dni del alumno
-    # calculamos la media del alumno
-    suma_notas = 0 # variable para almacenar la suma de las notas
-    for i in range(5,len(alumno)): # recorremos todas las notas del alumno
+    dni = alumno[2]
+    
+    suma_notas = 0 
+    for i in range(5,len(alumno)):
         print(alumno[i])
-        suma_notas = suma_notas + float(alumno[i]) # sumamos la nota a la variable suma_notas
-    media = suma_notas / (len(alumno) - 5) # calculamos la media dividiendo la suma de las notas entre el numero de notas
-    print(f"El alumno con DNI {dni} tiene una nota media de {media:.2f}") # imprimimos el dni y la nota media del alumno
+        suma_notas = suma_notas + float(alumno[i])
+    media = suma_notas / (len(alumno) - 5)
+    print(f"El alumno con DNI {dni} tiene una nota media de {media:.3f}") # .3f para limitar a 3 decimales
