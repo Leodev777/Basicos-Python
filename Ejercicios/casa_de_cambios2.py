@@ -1,8 +1,8 @@
-# Pedir ingresar cantidad de euros a convertir!
+# Pedir ingresar cantidad de euros a convertir!!!
 
 euros = input("Ingresa la cantidad de euros que deseas convertir: ")
 
-# Convertimos la cantidad ingresada a un FLOAT
+# Convertimos la cantidad ingresada a un float
 
 euros = float(euros)
 
