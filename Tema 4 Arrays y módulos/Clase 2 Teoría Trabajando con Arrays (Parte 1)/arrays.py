@@ -70,4 +70,191 @@ array_2 shape: (3, 2)
 
 '''
 
+# Tambien podemos cambiar si queremos 6 filas y una columna
+# por ende lo podemos convertir en un array univsimensional
 
+# Creacion de arrays sin usar listas!
+# Para eso podemos utilizar numpy.arange():
+
+mi_array = np.arange(8)
+print(mi_array)
+print(type(mi_array))
+
+# imprime:
+# [0 1 2 3 4 5 6 7]
+
+my_array_2 = np.array([1,2,3,4,5,6,7])
+print(my_array_2)
+print(type(my_array_2))
+
+# imprime:
+# [1 2 3 4 5 6 7]
+
+# Es lo mismo! pero de la otra forma es la manera mas eficiente! 
+
+# podemos iniciar por ejmplo en 2 o 3 como lo hacemos?
+my_array_3 = np.arange(3, 8) # inicia en 3 y termina en 8
+
+print(my_array_3) # [3 4 5 6 7]
+
+# si solo quiero numeros imppares podemos utilizar un step
+
+my_array_4 = np.arange(3, 20, 2) # inicia en 3 y termina en 20 con step de 2    
+# va a ir de valoes de 2 en 2
+print(my_array_4) # [ 3  5  7  9 11 13 15 17 19]
+
+# si queremos trabajar con decimales?
+
+my_array_5 = np.arange(3, 20, 0.5) # inicia en 3 y termina en 20 con step de 0.5
+print(my_array_5)
+
+# ahora hace saltos de 0.5
+# [ 3.   3.5  4.   4.5  5.   5.5  6.   6.5  7.   7.5  8.   8.5
+
+# podemos crear arrays vacios con np.zeros()
+# esto es util cuando queremos reservar espacio en memoria
+array_vacio = np.zeros((3,4)) # array de 3 filas y 4 columnas
+print(array_vacio)
+
+# imprime:
+# [[0. 0. 0. 0.]
+
+# otra forma es tambien con unos np.ones()
+array_unos = np.ones((2,3)) # array de 2 filas y 3 columnas
+print(array_unos)
+
+# imprime:
+# [[1. 1. 1.]
+
+# a veces no sabemos de antemano que valores va a contener el arrat
+# en estos casos puede interesarnos crear un array vacio
+
+# np.empty() -> crea un array sin inicializar
+array_sin_inicializar = np.empty((2,3)) # array de 2 filas y 3 columnas
+print(array_sin_inicializar)
+# imprime valores basura
+# [[1. 1. 1.]
+
+# en funcionamiento es el mismo! el tema es que si utilzamos empty
+# nos trae numeros aleaorios cuando imporimimos! no se por ejemplo
+
+# imporime: [6.177777777777777777773123e-307 6.177777777777777777773123e-307
+# 6.177777777777777777773123e-307   6.177777777777777777773123e-307
+
+# TENGAMOS CUIDADO CON ESTE ARAY, UTILICEN NP.ZEROS O NP.ONES SIEMPRE QUE PUEDAN
+
+# tambien podemos crear arrays unidad con numpy.eye()
+# esto es util para crear matrices identidad
+
+array_identidad = np.eye(3) # matriz identidad de 3x3
+print(array_identidad)
+
+# imprime:
+# [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
+
+eye_array = np.eye(3, k=1) 
+print(eye_array)
+# imprime:
+# [[0. 1. 0.]
+#  [0. 0. 1.]
+#  [0. 0. 0.]]
+
+# k=1 desplaza la diagonal principal una posicion a la derecha
+
+eye_array = np.eye(3, k=-1) 
+print(eye_array)
+
+# imprime:
+# [[0. 0. 0.]
+#  [1. 0. 0.]
+#  [0. 1. 0.]]
+
+# Esto en matetmaticas se llama matriz de unidad! 
+
+# Una vez creado el array podemos agregar sus valores, lo podemos maniupular
+# lo podemos hacer con todos los arrays! 
+# np.array(), np.arange(), np.zeros(), np.ones(), np.empty(), np.eye()
+
+# podemos cambiar todos los 0 en cualuier numero por ejempolo 9
+
+eye_array = np.eye(3, k=-1)
+eye_array[eye_array == 0] = 9
+print(eye_array)
+
+# imprime:
+# [[9. 9. 9.]
+#  [1. 9. 9.]
+#  [9. 1. 9.]]
+
+eye_array = np.eye(3, k=1)
+eye_array[eye_array == 0] = 2
+eye_array[eye_array <= 2] = 9
+print(eye_array)
+
+# imprime:
+# [[9. 1. 9.]
+#  [9. 9. 1.]
+#  [9. 9. 9.]]
+
+# sustituye todas las filas hasta el 2
+
+eye_array = np.eye(3, k=1)
+eye_array[0:2, :] = 2
+print(eye_array)
+
+# imprime:
+# [[2. 2. 2.] 
+#  [2. 2. 2.]
+#  [0. 0. 1.]]
+
+# Sustituye desde la fila 1 hasta la ultima
+
+eye_array = np.eye(3, k=1)
+eye_array[1:] = 2 # no se incluye el stop value
+print(eye_array)
+
+# imprime:
+# [[0. 1. 0.]
+#  [2. 2. 2.]
+#  [2. 2. 2.]]
+
+# Podemos una vez creado el array reasignar sus valores!
+# podemos hacerlo con todos los arrays, los creamos ocn np.array(), np.arange(), np.zeros(), np.ones(), np.empty(), np.eye()
+# np.orange() es el mas eficiente
+
+# sustituimos desde la fila 1 hasta la ultima y desde la columna 2 hasta la ultima
+
+eye_array = np.eye(3, k=1)
+eye_array[1:, 2:] = 0.11 # no se incluye el stop value
+print(eye_array)
+
+# imprime:
+# [[0.   1.   0.  ] 
+#  [0.   0.   0.11]
+#  [0.   0.   0.11]]
+# Podemos reasignar valores en arrays de cualquier dimension
+
+
+# Tambien podemos ordenar el contenido con np.sort()
+
+eye_array = np.eye(3, k=1)
+eye_array[eye_array == 0] = 2
+eye_array[eye_array <= 2] = 9
+eye_array[1:, 2:] = 0.11 # no se incluye el stop value
+print(eye_array)
+
+# imprime:
+# [[9.   1.   9.  ]
+#  [9.   9.   0.11]
+#  [9.   9.   0.11]]
+
+eye_array = np.eye(3, k=1)
+eye_array[eye_array == 0] = 2
+eye_array[eye_array <= 2] = 9
+eye_array[1:, 2:] = 4
+sorted_array = np.sort(eye_array)
+print(sorted_array)
+
+# imprime:  
