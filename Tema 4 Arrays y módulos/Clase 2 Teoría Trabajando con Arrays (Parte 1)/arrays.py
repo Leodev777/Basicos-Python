@@ -257,4 +257,62 @@ eye_array[1:, 2:] = 4
 sorted_array = np.sort(eye_array)
 print(sorted_array)
 
-# imprime:  
+# imprime:
+
+# 2. 2. 9
+# 4. 4. 9
+# 2. 4. 4
+
+eye_array = np.eye(3, k=1)
+eye_array = [eye_array == 0] = 2
+eye_array [eye_array < 2] = 9
+eye_array [1:, :2] = 4
+sorted_array = np.short(eye_array, axis = -1)
+print(sorted_array)
+
+#imprime: 
+
+# 2. 4. 2
+# 4. 4. 2
+# 4. 9. 9
+
+# Algo interesante que quiero que sepan! aunque por ahora no vamos a utilizar
+# es que optimizar el ordenamiento de elementos es algo realmente muy importante 
+# en progrmacion y hay varios alritmos para esto
+
+# el que vien epor dejepmor es quicksort ( Este es por defecto )
+# heapsort
+# mergesort
+
+# Esto no lo enseñan en ningun lado, no lo usamos mucho pero es importante
+# que sepan que existe.
+
+# COPIAR ARRAYS
+
+# Hay 2 opciones view() y copy()
+
+# view()
+
+array_view = sorted_array.view()
+array_view[:] = 5
+print(array_view)
+print(sorted_array)
+
+# 5. 5. 5
+
+# copy()
+
+#5. 5. 5
+
+array_copy = sorted_array.copy()
+array_copy[:] = 5 # Todos lso valores toman 5
+print(array_view)
+print(sorted_array)
+
+# el tema que sorted array tambien cambio lso valores! si no queremos que pase eso
+# utilizamos el copy 
+
+# SI COPIAMOS CON VIEW(): AFECTA TAMBIEN AL ARRAY ORIGINAL
+# SI COPIAMOS CON COPY(): CREA UN ARRAY INDEPENDIENTE SIN ALTERAR EL ORIGINAL
+
+
