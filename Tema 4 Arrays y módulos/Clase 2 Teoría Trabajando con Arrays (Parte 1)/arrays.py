@@ -41,3 +41,33 @@ print(type(lista_a_array[0])) # Esto regresa que es un entero de 8 bits
 
 lista_a_array_bi = np.array([[1,2,3],[4,5,6],[7,8,9]], dtype=np.int8)
 print(lista_a_array_bi)
+
+# Tambien tenemos array 3D, 4D, etc
+lista_a_array_3d = np.array([[[10,11,3],[13,14,15],[16,17,18]],[[19,20,21],[22,23,24],[25,26,27]]], dtype=np.int8)
+print(lista_a_array_3d)
+print(lista_a_array_3d.shape) # nos dice la forma del array
+# (2, 3, 3) -> 2 matrices de 3x3
+
+# Ya visto esto podemos avanzar a ver la redimension de arrays con reshape
+# reshape -> cambiar la forma del array
+
+array_1 = np.array([1,2,3], [4,5,6], type=np.int8) # array de 1 dimension
+print("array_1 shape: ", array_1.shape) # (6,) -> 1 dimension con 6 elementos
+print(array_1) # [1 2 3 4 5 6]
+array_2 = array_1.reshape(3,2) # 3 filas y 2 columnas
+print("array_2 shape: ", array_2.shape) # (3, 2) -> 2 dimension con 3 filas y 2 columnas
+print(array_2) # [[1 2]
+
+'''
+array_1 shape: (2, 3)
+[[1 2 3]
+[4 5 6]]
+
+array_2 shape: (3, 2)
+[[1 2]
+[3 4]
+[5 6]]
+
+'''
+
+
