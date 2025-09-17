@@ -99,3 +99,66 @@ print(b)
 print(valor_minimo)
 
 
+
+# argrim() trae el "INDICE" minimo del array
+
+b = np.arange(1,10), reversed((3,3))
+min_array_id = b.argmin()
+print(b)
+print(min_array_id)
+# 0
+
+# argmax() trae el "INDICE" maximo del array
+
+b = np.arange(1,10), reversed((3,3))
+max_array_id = b.argmax()
+print(b)
+print(max_array_id)
+
+# 8
+
+# Aplaneamiento de un array! Como aplanar un array!
+# Pasar de lineas y columnas a tener todo en una linea
+
+# reshape() + size
+b = np.arange(1,10).reshape((3,3))
+array_plano = b.reshape(b.size) 
+# [1, 2, 3, 4, 5, 6, 7, 7, 8, 9]
+
+
+# flatten() Crea una copy() del array cre un array independiente
+
+b = np.arange(1,10).reshape((3,3))
+array_plano = b.flatten()
+print(b)
+print(array_plano)
+# [1, 2, 3, 4, 5, 6, 7, 7, 8, 9]
+
+
+# ravel() Crea una view() del array creo una indentidad a la original, si cambio el original cambio el mismo
+
+b = np.arange(1,10).reshape((3,3))
+array_plano = b.ravel()
+print(b)
+print(array_plano)
+# [1, 2, 3, 4, 5, 6, 7, 7, 8, 9]
+
+
+# Transposicion de un array! intercambiar filas x columnas
+
+# swapaxes() cambiar ejes eje 0 es columna eje 1 es fila
+
+b = np.arange(1,10).reshape((3,3))
+array_trasnp = np.swapaxes(b, 0, 1)
+print(b)
+print(array_trasnp)
+
+# transpose()
+
+b = np.arange(1,10).reshape((3,3))
+print(b)
+array_trasnp = b.transpose(1, 0)
+print(array_trasnp)
+
+
+# Operaciones con matrices
