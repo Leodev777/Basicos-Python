@@ -162,3 +162,54 @@ print(array_trasnp)
 
 
 # Operaciones con matrices
+
+# Suma de matrices
+
+a = np.zeros((3,3), dtype = np.int64)
+a[:] = 2
+print(a)
+print(b)
+print("--------------------")
+resultado_suma = a + b
+print(resultado_suma)
+
+# Resta de matrices
+
+a = np.zeros((3,3), dtype = np.int64)
+a [:] = 2
+b = np.arange(1,10).reshape((3,3))
+print(a)
+print(b)
+print("--------------")
+resultado_rests = a - b
+print(resultado_rests)
+
+
+# Combinacion de operaciones
+
+a = np.zeros((3,3), dtype = np.int64)
+a[:] = 2
+b = np.arange(1,10).reshape((3,3))
+print(a)
+print(b)
+print("--------------")
+resultado = (a + b - 2*a)/4
+print(resultado)
+
+# Algo que aplicamos mucho es la Multiplicacion Matricial
+# esto es muy importante para la IA y la ML
+
+# Investiguen sobre esto!! paso el video
+
+a = np.zeros((3,3), dtype = np.int64)
+a[:] = 2
+b = np.arange(1,10).reshape((3,3))
+print(a)
+print(b)
+print("---------------")
+#multplicacion de matrices "Uso de MATMUL" o usamos( a @ b )
+matrix_multi = np.matmul(a,b)
+print(matrix_multi)
+print(a*b)
+
+# https://numpy.org/doc/
