@@ -55,3 +55,23 @@ print("El valor máximo es:", maximo_valor)
 
 media_ramdom = np.mean(array_random)
 print("Valor medio!", media_ramdom)
+# Calculamos la mediana
+mediana_random = np.median(array_random)
+mediana_decimales = np.median(array_decimales)
+# Desviacion estandar
+std_random = np.std(array_random)
+std_decimales = np.std(array_decimales)
+# Imprimimos los resultados
+print("Resultados para array random: ")
+print("Media: ", media_ramdom)
+print("Mediana: ", mediana_random)
+print("Desviacion estandar: ", std_random)
+
+
+# imprimimos
+
+print("Resultados para array random: ")
+print("Media: ", mediana_decimales)
+print("Mediana: ", mediana_random)
+print("Desviacion estandar: ", std_random)
+
