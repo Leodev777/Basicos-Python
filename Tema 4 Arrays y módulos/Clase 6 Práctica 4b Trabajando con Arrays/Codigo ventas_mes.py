@@ -1,4 +1,3 @@
-# importar modulos
 import numpy as np
 
 # Datos de ventas de la tienda / input
@@ -16,12 +15,9 @@ ventas = np.array([
 
 # Extraer las fechas
 fechas = np.array([venta[0] for venta in ventas])
-#print(fechas)
-# Extraer el mes
-meses = np.array([int(fecha[5:7]) for fecha in fechas])
-#print(meses)
 
-# sumar los montos de venta por mes
+# Extraer el mes
+meses = np.array([int(fecha[5:7]) for fecha in fechas]) 
 montos_mes = np.zeros(12)
 for mes in range(1,13):
     # ventas relacionadas con ese mes
