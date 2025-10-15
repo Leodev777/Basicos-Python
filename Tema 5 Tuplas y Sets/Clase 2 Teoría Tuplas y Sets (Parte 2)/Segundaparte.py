@@ -31,3 +31,18 @@ print(type(mi_set))
 
 # Salida: <class 'dict'>
 
+# Los set no preservan el orden de los elementos y los elementos no llevan un indice asociado, tampoco se pueden repetir tampoco podemoss
+# reasignar valores a los elementos del set
+
+
+# QUE PODEMOS HACER CON LOS SETS?
+# podemos comprobar pertenetencias ejemplo
+print('fantasma' in mi_set) # vemos si fantasta esta en el set
+# esto es mucho mas eficientes que las listas porque?
+
+# Los elementos en una lista tienen asociado un indice ----------> Para comprobar la pertenencia se recorren todos los elementos de la lista hasta encontrar o no el coincidente
+# Los elementos en un set no tiene un indice si no un HASH
+# (Un set es una hash table o tabla de hash) ---------> Python comprueba si el bucket correspondiente a ese set y ve si esta lleno o no.
+# El hash es unico para acada elemento, de manera que a ese elemento siempre va a estar guardado en el mismo lugar dentro de ese set(en el mismo "bucket")
+# bucket es: un espacio de memoria reservado para guardar un elemento
+
