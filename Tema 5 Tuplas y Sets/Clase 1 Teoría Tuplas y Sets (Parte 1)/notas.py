@@ -31,3 +31,39 @@ print(type(mi_tupla_1))
 mi_tupla_1 = ("verdura", 45, True)
 print(mi_tupla_1[0])
 
+# Lista VS Tupla VS Array
+
+# Lista: Mutabilidad (si), Acceso a lementos (Por indice), Tamaño de la lista (dimanico), Tipo de elemento(puede contener diferentes tipos), Eficiencia ( no tan eficiente como los array o las tuplas), Uso principal (cuando se requiere modificar listas con frecuencia)
+# Array: Mutabilidad (no), Acceso a elementos (Por indice), Tamaño de la lista (fijo), Tipo de elemento (debe ser el mismo tipo), Eficiencia (muy eficiente), Uso principal (cuando se requiere un alto rendimiento y se conoce el tamaño de antemano) 
+# Tupla: Mutabilidad (no), Acceso a elementos (Por indice), Tamaño de la lista (fijo), Tipo de elemento (puede contener diferentes tipos), Eficiencia (mas eficiente que las listas), Uso principal (cuando se requiere una coleccion inmutable de elementos)
+
+# Como pasamos de una lista a una tupla?
+
+mi_lista = [1,2,3,4,5,6, "hola mundoxd", True]
+print("mi tipo de lista es: ", type(mi_lista))
+
+mi_tupla = tuple(mi_lista)
+print("mi tipo de tupla es: ", type(mi_tupla))
+
+# De tupla a lista
+
+mi_tupla = (1,2,3,4,5,6, "hola riky xd", True)
+print("mi tipo de tupla es: ", type(mi_tupla))
+mi_lista = list(mi_tupla)
+print("mi tipo de lista es: ", type(mi_lista))
+
+# como trabajamos y que podemos hacer?
+# accedemos a lementors a traves de su indice
+# podermos hacer SLICING (tomar de un indice a cierto indice, creamos subtuplas)
+
+mi_nueva_tupla = (1,2,3,4,5,6,7,8,9,10)
+print("quiero accerder el 3 al 5: ", mi_nueva_tupla[2:5])
+print("La longitud de la tupla es :",len(mi_nueva_tupla))
+
+# Buscar apariciones dentro de una tupla
+# apariciones = mi_nueva_tupla.count(5)
+# print("El numero de apariciones del 5 es: ", apariciones)
+
+# tambien podemos pedir los indices
+# maximo = max(mi_nueva_tupla)
+# minimo = min(mi_nueva_tupla)
