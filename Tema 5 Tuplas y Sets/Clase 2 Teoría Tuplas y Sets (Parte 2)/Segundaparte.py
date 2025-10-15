@@ -46,3 +46,72 @@ print('fantasma' in mi_set) # vemos si fantasta esta en el set
 # El hash es unico para acada elemento, de manera que a ese elemento siempre va a estar guardado en el mismo lugar dentro de ese set(en el mismo "bucket")
 # bucket es: un espacio de memoria reservado para guardar un elemento
 
+
+# Podemos añadir y borrar elementos de un set
+
+# Añadir:
+
+frutas = {'manzana', 'naranja', 'pera'}
+frutas.add('kiwi')
+print(frutas)
+# salida: naranja, kiwi, manazana, pera
+# recordemos que no respeta orden
+
+# Borrar:
+frutas = {'manzana', 'naranja', 'pera'}
+frutas.discard('kiwi')
+print(frutas)
+
+# Salida: manazana, pera, naranja
+
+# tenemos dos metodos remove y discard
+# la diferencia intento borrar algo que no esta con remove da error
+# si embargo con discard no da error
+
+
+# Tambien PODEMOS PASAR DE LISTAS A SETS
+
+mi_lista = ['manzana', 'pera', 'naranja']
+print(type(mi_lista))
+# salida_ lista
+mi_set = set(mi_lista)
+print(type(mi_set))
+# salida: set
+
+# Union de conjuntos
+
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1 | set2) 
+print(set.union(set2))
+
+# salida: 1, 2, 3, 4, 5
+
+# Interseccion de conjuntos
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1 & set2)
+print(set.intersection(set2))
+
+# salida: 3
+
+# Diferencia de conjuntos
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1 - set2)
+print(set.difference(set2))
+
+# salida: 1, 2
+# Basicamente estoy pidiendo que me muestre los elementos que estan en el set1 pero no en el set2
+
+# Diferencia simetrica
+set1 = {1, 2, 3}
+set2 = {3, 4, 5}
+print(set1 ^ set2)
+print(set.symmetric_difference(set2))
+
+# salida: 1, 2, 4, 5
+# lo que esta haciendo es mostrarme los elementos que estan en el set1 y no el set2 y los elementos
+# que estan el set2 y no en el set1
+
+# salida: 1, 2, 4, 5
