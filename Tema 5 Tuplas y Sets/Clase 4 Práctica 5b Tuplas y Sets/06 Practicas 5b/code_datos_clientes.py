@@ -6,7 +6,7 @@ base_datos2 = [("Juan", "Calle 123", ["Libro1", "Libro2"]), ("Maria", "Calle 456
 nombres1 = set([cliente[0] for cliente in base_datos1])
 nombres2 = set([cliente[0] for cliente in base_datos2])
 
-# Se encuentra la intersección de ambos conjuntos, es decir, los clientes que aparecen en ambas bases de datos
+# Se encuentra la intersección de ambos conjuntos, esd decir, los clientes que aparecen en ambas bases de datos
 nombres_comunes = nombres1.intersection(nombres2)
 
 # Se imprime la lista de nombres de clientes comunes
