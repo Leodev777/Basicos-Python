@@ -37,3 +37,22 @@ print(dicc)
 dicc = {'pera': 1, 'manzana': 2, 'toronja': 3}
 dicc['Banana'] = 3 # agregamos un nuevo par clave:valor
 print(dicc)
+
+# Eliminar pares clave:valor
+
+dicc = {'pera': 1, 'manzana': 2, 'toronja': 3}
+del dicc['pera']
+print(dicc)
+
+# Diccionarios vacios
+dicc_vacio = {}
+mi_diccionario['manzana'] = 129
+mi_diccionario ['pera'] = 493
+mi_diccionario ['toronja'] = 129
+print(mi_diccionario)
+print(type(mi_diccionario))
+
+# Metodos de diccionarios Keys()
+
+diccionarioo = {'pera': 1, 'manzana': 2, 'toronja': 3}
+print(diccionarioo.keys())
