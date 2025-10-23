@@ -56,3 +56,60 @@ print(type(mi_diccionario))
 
 diccionarioo = {'pera': 1, 'manzana': 2, 'toronja': 3}
 print(diccionarioo.keys())
+
+# Podemos acceder a los diccionarios de varias maneras GET
+
+diccionarioo = {'pera': 1, 'manzana': 2, 'toronja': 3}
+print(diccionarioo.get('manzana'))
+print(diccionarioo.get('uva'))
+
+# Si la clave no existe, get() devuelve None en lugar de generar un error
+
+# Metodo Pop()
+# Elimina un par clave:valor y devuelve el valor asociado a la clave
+diccionarioo = {'pera':1, 'manzana':2, 'uva':5}
+valor = diccionarioo.pop('manzana')
+print(valor) # salida 2
+
+
+# Metodo Clear() 
+# Elimina todos los elementos del diccionario
+diccionarioo.clear()
+print(diccionarioo) # salida {}
+
+# De TUPLAS A DICCIONARIOS
+#mis_tuplas = [(key1, value1), (key2, value2), (key3, value3)]
+#mi_dict = dict(mis_tuplas)
+# print(mi_dict)
+# Importante: Si hay dos tuplas con la misma clave en la lista
+# de tuplas, solo se conservara la ultima tupla.
+# Es decir, el valor de la clave correspondiente sera el valor de la ultima
+# tupla en la lista.
+
+# Casos de uso comunes:
+# Diccionario con infomraciones diversas sobre un objeto:
+
+persona = {'edad': 23, 'altura': 1.60, 'nombre': 'Ana', 'ciudad': 'Atlantis'}
+edad = persona['edad']
+print(edad) # salida 23
+
+# Diccionario con un tipo de infomracion sobre varios objetos:
+
+lenguaje_programacion = {"Juan": "Python", "Pedro": "Java", "Maria": "C++"}
+lenguajes_de_juan = lenguaje_programacion["Juan"]
+print(lenguajes_de_juan) # Salida python
+
+# BUENAS PRACTICAS: en este caso escribimos los fragmentos de codigo para que lo podamos ver de mejor manera pero
+# en un script aplicando las buenas practicas se veria asi:
+
+persona = {
+      'edad': 23,
+      'altura': 1.60,
+      'nombre': 'Ana',
+      'ciudad': 'Atlantis',
+      'DNI': '20987456', # Esta ultima coma es una buena practica
+      }                    # al igual que la esctructura
+edad = persona['edad']
+print(edad) # salida 23
+
+
