@@ -134,5 +134,126 @@ print(usuarios)
 
 # Recorrer elementos de una lista de diccionarios:
 
-usuarios3_puntuacion = usuarios[2]['puntuacion']
+usuarios3_puntuacion = usuarios[2]['puntuacion'] # 2 es el indice, puntuacion es la clave correspondiente al valor
 print(usuarios3_puntuacion)
+
+# Anidamiento Listas en diccionarios
+
+# --- NIDAMIENTO: LISTAS DENTRO DE DICCIONARIOS ---
+
+# Ejemplo 1: Pedido en un restaurante
+# Se crea un diccionario que representa un pedido de pizza
+# Tiene dos claves:
+#   - 'masa': tipo de masa
+#   - 'ingredientes': lista con varios ingredientes
+pizza = {
+    "masa": "fina",
+    "ingredientes": ["aceitunas", "champiñones"]
+}
+
+# Se imprime un resumen del pedido accediendo a los valores del diccionario
+print("Has pedido una pizza de masa " + pizza["masa"] + " con los siguientes ingredientes:")
+
+# Se recorre la lista almacenada en la clave 'ingredientes'
+for ingrediente in pizza["ingredientes"]:
+    print(ingrediente)
+
+# Resultado:
+# Has pedido una pizza de masa fina con los siguientes ingredientes:
+# aceitunas
+# champiñones
+
+
+# Ejemplo 2: Trabajadores en una compañía
+# Se crea un diccionario llamado 'programadores'
+# Cada clave es el nombre de un trabajador
+# Cada valor es una lista con los lenguajes que domina
+programadores = {
+    "juan": ["python", "c++"],
+    "sara": ["c", "rust"],
+    "eduardo": ["solidity", "fortran"],
+    "felipe": ["python", "fortran", "r"]
+}
+
+# Se recorre el diccionario usando .items() para obtener clave y valor
+for nombre, lenguajes in programadores.items():
+    # Se imprime el nombre del programador formateado
+    print("\n" + nombre.title() + " sabe usar los lenguajes:")
+    
+    # Luego se recorre la lista de lenguajes de cada programador
+    for lenguaje in lenguajes:
+        print(lenguaje.title())
+
+# Resultado:
+# Juan sabe usar los lenguajes:
+# Python
+# C++
+#
+# Sara sabe usar los lenguajes:
+# C
+# Rust
+#
+# Eduardo sabe usar los lenguajes:
+# Solidity
+# Fortran
+#
+# Felipe sabe usar los lenguajes:
+# Python
+# Fortran
+# R
+
+
+
+# Anidamientos de DICCIONARIOS EN DICCIONARIOS:
+
+userrs = {
+    'vene':{
+        'nombre': 'lucas',
+        'apellido': 'varela',
+        'ubicacion': 'alemania'
+    },
+    'crodri':{
+        'nombre': 'roberto',
+        'apellido': 'garcia',
+        'ubicacion': 'peru'
+    },
+    'bros':{
+        'nombre': 'daniel',
+        'apellido': 'pereyra',
+        'ubicacion': 'bolivia'
+    }
+}
+
+# Diccionario de usuarios con información personal
+users = {
+    'lvene': {
+        'nombre': 'Lucas',
+        'apellido': 'Vene',
+        'ubicacion': 'Paris'
+    },
+    'crodriguez': {
+        'nombre': 'Carlos',
+        'apellido': 'Rodríguez',
+        'ubicacion': 'Madrid'
+    },
+    'tbauer': {
+        'nombre': 'Thomas',
+        'apellido': 'Bauer',
+        'ubicacion': 'Berlin'
+    }
+}
+
+# Iterar a través de cada usuario en el diccionario
+for username, user_info in users.items():
+    # Imprimir el nombre de usuario
+    print("\nUsername: " + username)
+    
+    # Combinar nombre y apellido para crear el nombre completo
+    full_name = user_info['nombre'] + " " + user_info["apellido"]
+    
+    # Obtener la ubicación del usuario
+    ubicacion = user_info["ubicacion"]
+    
+    # Imprimir la información formateada del usuario
+    print("\tNombre completo: " + full_name.title())
+    print("\tUbicacion: " + ubicacion.title())
