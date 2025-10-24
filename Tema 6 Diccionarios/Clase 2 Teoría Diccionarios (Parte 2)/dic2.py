@@ -257,3 +257,6 @@ for username, user_info in users.items():
     # Imprimir la información formateada del usuario
     print("\tNombre completo: " + full_name.title())
     print("\tUbicacion: " + ubicacion.title())
+
+
+    
