@@ -6,7 +6,7 @@ asistencias["Estudiante1"] = ["2022-01-01", "2022-01-03", "2022-01-05"]
 asistencias["Estudiante2"] = ["2022-01-02", "2022-01-05", "2022-01-07"]
 asistencias["Estudiante3"] = ["2022-01-01", "2022-01-07", "2022-01-09"]
 
-# Agregar nuevas fechas de asistencia para un estudiante existente
+# Agregar nuevas fechas
 asistencias["Estudiante1"].append("2022-01-07")
 asistencias["Estudiante2"].append("2022-01-09")
 
